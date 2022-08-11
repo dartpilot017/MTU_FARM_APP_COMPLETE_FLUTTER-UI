@@ -26,7 +26,7 @@ class GrapePage extends StatelessWidget {
                     image: DecorationImage(
                       fit: BoxFit.cover,
                       image: AssetImage(
-                          "images/grapes.jpeg"
+                          "assets/images/grapes.jpeg"
                       ),
                     )
                 ),

@@ -7,8 +7,27 @@ import '../../widgets/app_icon.dart';
 import '../../widgets/big_text.dart';
 import '../../widgets/expandable_text.dart';
 
-class ApplePage extends StatelessWidget {
+class ApplePage extends StatefulWidget {
   const ApplePage({Key? key}) : super(key: key);
+
+  @override
+  State<ApplePage> createState() => _ApplePageState();
+}
+
+class _ApplePageState extends State<ApplePage> {
+
+  int _counter = 0;
+
+  void _incrementCounter() {
+    setState(() {
+      // This call to setState tells the Flutter framework that something has
+      // changed in this State, which causes it to rerun the build method below
+      // so that the display can reflect the updated values. If we changed
+      // _counter without calling setState(), then the build method would not be
+      // called again, and so nothing would appear to happen.
+      _counter++;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +46,7 @@ class ApplePage extends StatelessWidget {
                     image: DecorationImage(
                       fit: BoxFit.cover,
                       image: AssetImage(
-                          "images/apple.jpeg"
+                          "assets/images/apple.jpeg"
                       ),
                     )
                 ),
@@ -46,7 +65,29 @@ class ApplePage extends StatelessWidget {
                     onTap: (){
                       Navigator.pop(context);
                     },),
-                  AppIcon(icon: Icons.shopping_cart_rounded,backgroundColor: Colors.transparent,iconColor: Colors.white,)
+                  //cart button
+                  GestureDetector(
+                    onTap: (){},
+                    child: Stack(
+                      children: [
+                        Positioned(child: GestureDetector(
+                          onTap: (){},
+                        child: AppIcon(
+                          icon: Icons.shopping_cart_rounded,
+                          backgroundColor: Colors.transparent,
+                          iconColor: Colors.white,
+                          text: '$_counter',
+                        ),),),
+                        Positioned(child: CircleAvatar(
+                          radius: 12,
+                          backgroundColor: Colors.red,
+                          child: Text('$_counter', style: TextStyle(
+                            color: Colors.white
+                          ),),
+                        ))
+                      ],
+                    ),
+                  ),
                 ],
               )
           ),
@@ -105,11 +146,18 @@ class ApplePage extends StatelessWidget {
               ),
               child: Row(
                 children: [
-                  Icon(Icons.remove, color: Colors.black26,),
+                  GestureDetector(
+                    child: Icon(Icons.remove, color: Colors.black26,),
+                    onTap: (){},
+                    // _decrementCounter,
+                  ),
                   SizedBox(width: 5,),
                   BigText(text: "0"),
                   SizedBox(width: 5,),
-                  Icon(Icons.add, color: Colors.black26,)
+                  GestureDetector(
+                    child: Icon(Icons.add, color: Colors.black26,),
+                    onTap: _incrementCounter,
+                  ),
                 ],
               ),
             ),

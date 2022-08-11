@@ -26,7 +26,7 @@ class UguPage extends StatelessWidget {
                     image: DecorationImage(
                       fit: BoxFit.cover,
                       image: AssetImage(
-                          "images/ugu.jpeg"
+                          "assets/images/ugu.jpeg"
                       ),
                     )
                 ),
@@ -67,7 +67,7 @@ class UguPage extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    AppColunm(text: 'Ugu'),
+                    AppColunm(text: 'Ugwu'),
                     SizedBox(height: 20,),
                     BigText(text: "Nutrition facts"),
                     SizedBox(height: 20,),

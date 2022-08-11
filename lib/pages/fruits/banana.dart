@@ -6,8 +6,25 @@ import '../../widgets/app_icon.dart';
 import '../../widgets/big_text.dart';
 import '../../widgets/expandable_text.dart';
 
-class BananaPage extends StatelessWidget {
+
+class BananaPage extends StatefulWidget {
   const BananaPage({Key? key}) : super(key: key);
+
+  @override
+  State<BananaPage> createState() => _BananaPageState();
+}
+
+class _BananaPageState extends State<BananaPage> {
+
+  int _counter=0;
+
+  void _incrementCounter() {
+    setState(() {
+
+      _counter++;
+    });
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +43,7 @@ class BananaPage extends StatelessWidget {
                     image: DecorationImage(
                       fit: BoxFit.cover,
                       image: AssetImage(
-                          "images/banana.jpg"
+                          "assets/images/banana.jpg"
                       ),
                     )
                 ),
@@ -41,11 +58,33 @@ class BananaPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   GestureDetector(
-                    child: AppIcon(icon: Icons.arrow_back_ios,backgroundColor: Colors.transparent, iconColor: Colors.black,),
+                    child: AppIcon(icon: Icons.arrow_back_ios, backgroundColor: Colors.transparent, iconColor: Colors.white,),
                     onTap: (){
                       Navigator.pop(context);
                     },),
-                  AppIcon(icon: Icons.shopping_cart_rounded,backgroundColor: Colors.transparent, iconColor: Colors.black,)
+                  //cart button
+                  GestureDetector(
+                    onTap: (){},
+                    child: Stack(
+                      children: [
+                        Positioned(child: GestureDetector(
+                          onTap: (){},
+                          child: AppIcon(
+                            icon: Icons.shopping_cart_rounded,
+                            backgroundColor: Colors.transparent,
+                            iconColor: Colors.white,
+                            text: '$_counter',
+                          ),),),
+                        Positioned(child: CircleAvatar(
+                          radius: 12,
+                          backgroundColor: Colors.red,
+                          child: Text('$_counter', style: TextStyle(
+                              color: Colors.white
+                          ),),
+                        ))
+                      ],
+                    ),
+                  ),
                 ],
               )
           ),
@@ -71,7 +110,8 @@ class BananaPage extends StatelessWidget {
                     SizedBox(height: 20,),
                     BigText(text: "Nutrition facts"),
                     SizedBox(height: 20,),
-                    Expanded(
+                    Expanded
+                      (
                       child: SingleChildScrollView(
                         child: ExpandableText(
                           text: "Apples are high in fiber, vitamin C, and various antioxidants. They are also very filling, considering their low calorie count. Here are the nutrition  facts for one raw, unpeeled, medium-sized apple (100 g) Calories: 52, Water: 86%, Protein: 0.3g, Carbs: 13.8g, Sugar: 10.4g, Fiber: 2.4g, Fat: 0.2g. Apples also contain Vitamin C and a main mineral source which is Potassium.",),
@@ -104,11 +144,18 @@ class BananaPage extends StatelessWidget {
               ),
               child: Row(
                 children: [
-                  Icon(Icons.remove, color: Colors.black26,),
+                  GestureDetector(
+                    child: Icon(Icons.remove, color: Colors.black26,),
+                    onTap: (){},
+                    // _decrementCounter,
+                  ),
                   SizedBox(width: 5,),
                   BigText(text: "0"),
                   SizedBox(width: 5,),
-                  Icon(Icons.add, color: Colors.black26,)
+                  GestureDetector(
+                    child: Icon(Icons.add, color: Colors.black26,),
+                    onTap: _incrementCounter,
+                  ),
                 ],
               ),
             ),

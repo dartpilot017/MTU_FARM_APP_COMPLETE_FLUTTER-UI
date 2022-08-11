@@ -26,7 +26,7 @@ class PotatoesPage extends StatelessWidget {
                     image: DecorationImage(
                       fit: BoxFit.cover,
                       image: AssetImage(
-                          "images/potatoes.jpeg"
+                          "assets/images/potatoes.jpeg"
                       ),
                     )
                 ),

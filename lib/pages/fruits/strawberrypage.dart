@@ -15,7 +15,6 @@ class StrawberryPage extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Stack(
         children: [
-          //background image
           Positioned(
               left: 0,
               right: 0,
@@ -26,7 +25,7 @@ class StrawberryPage extends StatelessWidget {
                     image: DecorationImage(
                       fit: BoxFit.cover,
                       image: AssetImage(
-                          "images/fruits/strawberry.jpeg"
+                          "assets/images/strawberry.jpeg"
                       ),
                     )
                 ),

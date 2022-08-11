@@ -26,7 +26,7 @@ class EfoPage extends StatelessWidget {
                     image: DecorationImage(
                       fit: BoxFit.cover,
                       image: AssetImage(
-                          "images/efo_riro.jpeg"
+                          "assets/images/efo_riro.jpeg"
                       ),
                     )
                 ),

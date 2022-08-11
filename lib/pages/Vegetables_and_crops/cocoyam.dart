@@ -26,7 +26,7 @@ class CocoYamPage extends StatelessWidget {
                     image: DecorationImage(
                       fit: BoxFit.cover,
                       image: AssetImage(
-                          "images/cocoyam.jpeg"
+                          "assets/images/cocoyam.jpeg"
                       ),
                     )
                 ),

@@ -26,7 +26,7 @@ class OkroPage extends StatelessWidget {
                     image: DecorationImage(
                       fit: BoxFit.cover,
                       image: AssetImage(
-                          "images/okro.jpeg"
+                          "assets/images/okro.jpeg"
                       ),
                     )
                 ),

@@ -15,7 +15,6 @@ class BeansPage extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Stack(
         children: [
-          //background image
           Positioned(
               left: 0,
               right: 0,
@@ -26,7 +25,7 @@ class BeansPage extends StatelessWidget {
                     image: DecorationImage(
                       fit: BoxFit.cover,
                       image: AssetImage(
-                          "images/grapes.jpeg"
+                          "assets/images/beans.jpeg"
                       ),
                     )
                 ),
@@ -67,7 +66,7 @@ class BeansPage extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    AppColunm(text: 'Grapes'),
+                    AppColunm(text: 'Beans'),
                     SizedBox(height: 20,),
                     BigText(text: "Nutrition facts"),
                     SizedBox(height: 20,),

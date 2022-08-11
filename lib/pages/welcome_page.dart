@@ -24,9 +24,9 @@ class WelcomePage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       CenteredImage(
-                        image1: 'images/mtu.jpg',
+                        image1: 'assets/images/mtu.jpg',
                         text1: "MTU FARM",
-                        image2: 'images/fruitshelf.jpg',
+                        image2: 'assets/images/fruitshelf.jpg',
                         width2: 350,
                         height2: 250,),
                     ],

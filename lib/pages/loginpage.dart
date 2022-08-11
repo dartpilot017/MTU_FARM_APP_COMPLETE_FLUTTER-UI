@@ -24,7 +24,7 @@ class _LoginPageState extends State<LoginPage> {
           decoration: BoxDecoration(
             image: DecorationImage(
               fit: BoxFit.cover,
-              image: AssetImage('images/background.png'),
+              image: AssetImage('assets/images/background.png'),
               colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.5), BlendMode.dstATop),
             ),
           ),
@@ -42,8 +42,7 @@ class _LoginPageState extends State<LoginPage> {
                         height: Dimensions.height150,
                         child: CircleAvatar(
                           radius: 50,
-                          backgroundColor: Colors.green,
-                          backgroundImage: AssetImage('images/mtu.jpg'),
+                          backgroundImage: AssetImage('assets/images/mtu.jpg'),
                         ),
                       ),
                     ),
@@ -202,7 +201,7 @@ class _LoginPageState extends State<LoginPage> {
                           onTap: (){
                             Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => HomePage()));
+                                MaterialPageRoute(builder: (context) => ProductsHomePage()));
                           },
                           child: Container(
                             padding: EdgeInsets.only(

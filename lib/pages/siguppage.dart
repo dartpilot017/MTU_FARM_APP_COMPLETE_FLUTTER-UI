@@ -22,7 +22,7 @@ class _SignupPageState extends State<SignupPage> {
         decoration: BoxDecoration(
           image: DecorationImage(
             fit: BoxFit.cover,
-            image: AssetImage('images/background.png'),
+            image: AssetImage('assets/images/background.png'),
             colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.5), BlendMode.dstATop),
           ),
         ),

@@ -26,7 +26,7 @@ class MangoPage extends StatelessWidget {
                     image: DecorationImage(
                       fit: BoxFit.cover,
                       image: AssetImage(
-                          "images/Mangoes.png"
+                          "assets/images/Mangoes.png"
                       ),
                     )
                 ),

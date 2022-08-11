@@ -26,7 +26,7 @@ class RicePage extends StatelessWidget {
                     image: DecorationImage(
                       fit: BoxFit.cover,
                       image: AssetImage(
-                          "images/crops.webp"
+                          "assets/images/crops.webp"
                       ),
                     )
                 ),

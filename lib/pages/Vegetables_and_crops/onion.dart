@@ -26,7 +26,7 @@ class OnionPage extends StatelessWidget {
                     image: DecorationImage(
                       fit: BoxFit.cover,
                       image: AssetImage(
-                          "images/onions.png"
+                          "assets/images/onions.png"
                       ),
                     )
                 ),

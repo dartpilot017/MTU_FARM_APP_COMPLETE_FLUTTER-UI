@@ -26,7 +26,7 @@ class PepperPage extends StatelessWidget {
                     image: DecorationImage(
                       fit: BoxFit.cover,
                       image: AssetImage(
-                          "images/pepper.jpeg"
+                          "assets/images/pepper.jpeg"
                       ),
                     )
                 ),

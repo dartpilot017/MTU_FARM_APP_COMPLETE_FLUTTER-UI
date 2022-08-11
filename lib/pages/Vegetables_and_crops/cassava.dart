@@ -26,7 +26,7 @@ class CassavaPage extends StatelessWidget {
                     image: DecorationImage(
                       fit: BoxFit.cover,
                       image: AssetImage(
-                          "images/grapes.jpeg"
+                          "assets/images/cassava.jpeg"
                       ),
                     )
                 ),
@@ -67,7 +67,7 @@ class CassavaPage extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    AppColunm(text: 'Grapes'),
+                    AppColunm(text: 'Cassava'),
                     SizedBox(height: 20,),
                     BigText(text: "Nutrition facts"),
                     SizedBox(height: 20,),

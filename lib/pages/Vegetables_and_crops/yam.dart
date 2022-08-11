@@ -26,7 +26,7 @@ class YamPage extends StatelessWidget {
                     image: DecorationImage(
                       fit: BoxFit.cover,
                       image: AssetImage(
-                          "images/yam.jpeg"
+                          "assets/images/yam.jpeg"
                       ),
                     )
                 ),
